@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Productivity Hub</title>
+
+</head>
+
+<body>
+
+<header>
+    <h1>🎓 Student Productivity Hub</h1>
+    <p>Your personal space to plan, study and achieve more.</p>
+</header>
+
+<nav>
+    <a href="#dashboard">Dashboard</a>
+    <a href="#tasks">My Tasks</a>
+    <a href="#timer">Study Timer</a>
+    <a href="#notes-section">Quick Notes</a>
+</nav>
+
+<div class="container">
+
+    <section id="dashboard">
+
+        <div class="welcome">
+            <h2 id="greeting">Welcome, Student! 👋</h2>
+            <p id="today"></p>
+        </div>
+
+        <div class="stats">
+
+            <div class="stat-card">
+                <h3>Total Tasks</h3>
+                <h2 id="totalTasks">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <h3>Completed Tasks</h3>
+                <h2 id="completedTasks">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <h3>Remaining Tasks</h3>
+                <h2 id="remainingTasks">0</h2>
+            </div>
+
+            <div class="stat-card">
+                <h3>Completion Rate</h3>
+                <h2 id="completionRate">0%</h2>
+            </div>
+
+        </div>
+
+        <h2 class="section-title">Your Daily Progress</h2>
+
+        <div class="card">
+            <p id="progressText">You have completed 0% of your tasks.</p>
+
+            <div class="progress-bg">
+                <div class="progress-fill" id="progressBar"></div>
+            </div>
+        </div>
+
+    </section>
+
+    <section id="tasks">
+
+        <h2 class="section-title">📝 My To-Do List</h2>
+
+        <div class="card">
+
+            <h3>Manage Your Tasks</h3>
+
+            <input
+                type="text"
+                id="taskInput"
+                placeholder="Enter your task here..."
+            >
+
+            <button onclick="addTask()">+ Add Task</button>
+
+            <div class="task-list" id="taskList"></div>
+
+        </div>
+
+    </section>
+
+    <section id="timer">
+
+        <h2 class="section-title">⏰ Pomodoro Study Timer</h2>
+
+        <div class="card timer">
+
+            <p id="timerMode">Focus Time</p>
+
+            <h2 id="timerDisplay">25:00</h2>
+
+            <div class="timer-buttons">
+
+                <button onclick="startTimer()">Start</button>
+
+                <button class="secondary" onclick="pauseTimer()">
+                    Pause
+                </button>
+
+                <button class="secondary" onclick="resetTimer()">
+                    Reset
+                </button>
+
+                <button class="secondary" onclick="switchMode()">
+                    Switch Mode
+                </button>
+
+            </div>
+
+            <p id="timerMessage" style="margin-top:18px;">
+                Stay focused. You can do it!
+            </p>
+
+        </div>
+
+    </section>
+
+    <section id="notes-section">
+
+        <h2 class="section-title">📚 Quick Notes</h2>
+
+        <div class="card">
+
+            <h3>Your Personal Notebook</h3>
+
+            <textarea
+                id="notes"
+                placeholder="Write your important notes here..."
+            ></textarea>
+
+            <button onclick="saveNotes()">Save Notes</button>
+
+            <p id="noteMessage" style="margin-top:12px;color:green;"></p>
+
+        </div>
+
+    </section>
+
+    <section>
+
+        <h2 class="section-title">💡 Daily Motivation</h2>
+
+        <div class="quote">
+
+            <p id="quoteText">
+                "Success is the sum of small efforts repeated day in and day out."
+            </p>
+
+            <br>
+
+            <button onclick="newQuote()">New Motivation</button>
+
+        </div>
+
+    </section>
+
+</div>
+
+<footer>
+    <p>© 2026 Student Productivity Hub | Designed for Students ❤️</p>
+    <p style="margin-top:8px;">Plan Smart • Study Hard • Achieve More</p>
+</footer>
+</body>
+</html>
