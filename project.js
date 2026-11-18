@@ -10,16 +10,16 @@ document.getElementById("today").textContent =
 
 const hour = today.getHours();
 
-let greeting = "Good Evening";
+let greeting = "Good Evening...";
 
 if (hour < 12) {
-    greeting = "Good Morning";
+    greeting = "Good Morning...";
 } else if (hour < 17) {
-    greeting = "Good Afternoon";
+    greeting = "Good Afternoon...";
 }
 
 document.getElementById("greeting").textContent =
-    greeting + ", Student! 👋";
+    greeting + ", Student!";
 
 
 // TASK MANAGEMENT
@@ -246,7 +246,7 @@ function switchMode() {
     timeLeft = isFocus ? 25 * 60 : 5 * 60;
 
     document.getElementById("timerMode").textContent =
-        isFocus ? "Focus Time" : "Break Time";
+        isFocus ? "Study Time" : "Break Time";
 
     updateTimerDisplay();
 
